@@ -24,8 +24,7 @@ const map = new Map({
 var source = new ImageWMS({
     attributions: ['NOAA'],
     url: 'https://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer/WMSServer',
-    params: {'LAYERS': '1'},
-    projection: 'EPSG:3857'
+    params: {'LAYERS': '1'}
 });
 
 var layer = new Image({
