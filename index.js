@@ -2,7 +2,10 @@ import 'ol/ol.css';
 import {Map, View} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
+import {fromLonLat} from 'ol/proj';
 
+const washingtonLonLat = [-77.036667, 38.895];
+const washingtonLonLatMercator = fromLonLat(washingtonLonLat);
 const map = new Map({
   target: 'map',
   layers: [
@@ -11,7 +14,7 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: [0, 0],
-    zoom: 0
+    center: washingtonLonLatMercator,
+    zoom: 6
   })
 });
